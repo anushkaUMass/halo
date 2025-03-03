@@ -4,10 +4,10 @@
 **Halo - Team 9**  
 
 ## Team Members  
-- [Your Name] (@yourGitHubUsername)  
-- [Team Member 2] (@GitHubUsername)  
-- [Team Member 3] (@GitHubUsername)  
-- [Team Member 4] (@GitHubUsername)  
+- Anushka Trehan (@atrehan0803)  
+- Nicole Dsouza (@nicoleadsouza)  
+- Khushali Bhatt (@khushalibhatt)  
+- Emma Azzi (@emmaazzi)  
 
 ## Overview  
 Halo is a safety-focused application designed to empower women and vulnerable individuals by providing real-time safety alerts, emergency assistance, and community-driven incident reporting. The app integrates **Google Maps with 3D WebGL** to indicate potentially unsafe areas, nearby police stations, and hospitals. It also features **an SOS emergency button**, live location sharing, and an educational hub for self-defense tips.  
