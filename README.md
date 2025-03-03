@@ -4,7 +4,7 @@
 **Halo - Team 9**  
 
 ## Team Members  
-- Anushka Trehan (@atrehan0803)  
+- Anushka Trehan (@anushkaUMass)
 - Nicole Dsouza (@nicoleadsouza)  
 - Khushali Bhatt (@khushalibhatt)  
 - Emma Azzi (@emmaazzi)  
