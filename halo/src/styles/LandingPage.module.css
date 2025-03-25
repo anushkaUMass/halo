@@ -1,0 +1,138 @@
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: #ffb7ce;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 24px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  
+  .navLinks li {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+  
+  .navLinks li:hover {
+    color: #1e90ff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .subheading {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 24px;
+  }
+  
+  /* Buttons */
+  .buttons {
+    display: flex;
+    gap: 16px;
+  }
+  
+  /* Primary Button */
+  .primaryButton {
+    background-color: #1e90ff;
+    color: white;
+  }
+  
+  .primaryButton:hover {
+    background-color: #1c86ee;
+  }
+  
+  /* Secondary Button */
+  .secondaryButton {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  .secondaryButton:hover {
+    background-color: #e60000;
+  }
+  
+  /* RESPONSIVENESS */
+  
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .hero {
+      padding: 16px;
+    }
+  
+    .heading {
+      font-size: 28px;
+    }
+  
+    .subheading {
+      font-size: 16px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+    }
+  }
+  
+  /* Desktop view */
+  @media (min-width: 1024px) {
+    .container {
+      padding: 40px;
+    }
+  
+    .hero {
+      padding: 0;
+    }
+  
+    .heading {
+      font-size: 42px;
+    }
+  
+    .subheading {
+      font-size: 20px;
+    }
+  }
+  
