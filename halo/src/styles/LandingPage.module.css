@@ -1,4 +1,4 @@
-/* Container */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -7,8 +7,7 @@
     height: 100vh;
     background-color: #ffb7ce;
   }
-  
-  /* Navbar */
+
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -71,7 +70,7 @@
     gap: 16px;
   }
   
-  /* Primary Button */
+
   .primaryButton {
     background-color: #1e90ff;
     color: white;
@@ -81,7 +80,7 @@
     background-color: #1c86ee;
   }
   
-  /* Secondary Button */
+
   .secondaryButton {
     background-color: #ff4d4d;
     color: white;
@@ -93,7 +92,7 @@
   
   /* RESPONSIVENESS */
   
-  /* Mobile view adjustments */
+  /* mobile */
   @media (max-width: 768px) {
     .navbar {
       flex-direction: column;
@@ -117,7 +116,7 @@
     }
   }
   
-  /* Desktop view */
+  /* desktop  */
   @media (min-width: 1024px) {
     .container {
       padding: 40px;
