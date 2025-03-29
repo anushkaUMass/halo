@@ -1,137 +1,182 @@
 
-.container {
+
+/* ===== Base Wrapper ===== */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== Desktop Layout ===== */
+@media (min-width: 1024px) {
+  .desktopLayout {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    height: 100vh;
-    background-color: #ffb7ce;
+    height: 100%;
+    width: 100%;
+    position: relative;
   }
 
-  .navbar {
+
+  .desktopContentSection {
+    flex: 1;
+    padding: 2rem;
+    background-image: url('../assets/bg-desktop.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .desktopMapOverlay {
+    position: absolute;
+    top: 50%;
+    right: 20rem;
+    transform: translateY(-50%);
+    width: 550px;
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    display: block;
+  }
+
+  .desktopNavbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 16px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 24px;
+    margin-bottom: 2rem;
   }
-  
-  .logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
+
+  .desktopLogo {
+    height: 100px;
+    width: 100px;
   }
-  
-  .navLinks {
+
+  .desktopNavLinks {
     display: flex;
+    gap: 2rem;
     list-style: none;
-    gap: 20px;
   }
-  
-  .navLinks li {
-    cursor: pointer;
+
+  .desktopNavLinks li {
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    transition: color 0.2s ease;
+    cursor: pointer;
   }
-  
-  .navLinks li:hover {
+
+  .desktopNavLinks li:hover {
     color: #1e90ff;
   }
-  
-  /* Hero Section */
-  .hero {
+
+  .desktopHero {
     text-align: center;
-    margin-top: 20px;
   }
-  
-  .heading {
-    font-size: 36px;
+
+  .desktopHeading {
+    font-size: 42px;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 12px;
+    margin-top: 100px;
   }
-  
-  .subheading {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 24px;
-  }
-  
-  /* Buttons */
-  .buttons {
+
+  .desktopButtons {
     display: flex;
-    gap: 16px;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
-  
 
-  .primaryButton {
-    background-color: #1e90ff;
-    color: white;
+  .mobileLayout {
+    display: none;
   }
-  
-  .primaryButton:hover {
-    background-color: #1c86ee;
-  }
-  
+}
 
-  .secondaryButton {
-    background-color: #ff4d4d;
-    color: white;
+/* ===== Mobile Layout ===== */
+@media (max-width: 1023px) {
+  .desktopLayout {
+    display: none;
   }
-  
-  .secondaryButton:hover {
-    background-color: #e60000;
+
+  .mobileLayout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
   }
-  
-  /* RESPONSIVENESS */
-  
-  /* mobile */
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      gap: 12px;
-    }
-  
-    .hero {
-      padding: 16px;
-    }
-  
-    .heading {
-      font-size: 28px;
-    }
-  
-    .subheading {
-      font-size: 16px;
-    }
-  
-    .buttons {
-      flex-direction: column;
-    }
+
+  .mobileTabContent {
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
   }
-  
-  /* desktop  */
-  @media (min-width: 1024px) {
-    .container {
-      padding: 40px;
-    }
-  
-    .hero {
-      padding: 0;
-    }
-  
-    .heading {
-      font-size: 42px;
-    }
-  
-    .subheading {
-      font-size: 20px;
-    }
+
+  .mobileTabContent.bg {
+    background-image: url('../assets/bg-mobile.jpeg');
+    background-size: cover;
+    background-position: center;
   }
-  
+
+  .mobileTabContent.map {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mobileHeading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin-top: 400px;
+    margin-bottom: 1rem;
+  }
+
+  .mobileNavbarTabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.75rem 0;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .mobileNavbarTabs button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: #555;
+    padding: 0.5rem;
+    flex: 1;
+  }
+
+  .mobileNavbarTabs button.active {
+    color: #1e90ff;
+    border-bottom: 2px solid #1e90ff;
+  }
+}
+
+/* ===== Button Styles ===== */
+.primaryButton {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.secondaryButton {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.primaryButton:hover {
+  background-color: #1c86ee;
+}
+
+.secondaryButton:hover {
+  background-color: #e60000;
+}

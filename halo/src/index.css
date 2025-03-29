@@ -1,10 +1,17 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'HaloFont', sans-serif;
   box-sizing: border-box;
 }
 
 * {
   box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'HaloFont';
+  src: url('../public/elements/haloFont.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
