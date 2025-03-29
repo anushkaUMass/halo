@@ -20,7 +20,6 @@
     object-fit: contain;
   }
   
-  /* Button container to center buttons */
   .buttonDanger {
     background-color: #ff4d4d;
     color: white;

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/LandingPage.module.css';
 import Button from '../components/Button';
+import MapView from '../components/MapView';
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -24,12 +25,13 @@ export default function LandingPage() {
         </ul>
       </nav>
 
-      {/* Hero Section */}
       <div className={styles.hero}>
-        <h1 className={styles.heading}>Welcome to Halo</h1>
-        <p className={styles.subheading}>
-          Experience the best platform for seamless interaction and innovation.
-        </p>
+        <h1 className={styles.heading}>Welcome to Halo</h1> 
+        {/* typewriter font style? would be so cute */}
+
+        <div className="mapContainer">
+          <MapView />
+        </div>
 
         {/* CTA Buttons */}
         <div className={styles.buttons}>
