@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import Button from '../components/Button';
 import styles from '../styles/ResourcesPage.module.css';
 
 export default function ResourcesPage() {
@@ -49,9 +50,19 @@ export default function ResourcesPage() {
         ))}
       </div>
 
-      <button className={styles.backButton} onClick={() => navigate('/')}>
-        Back to Home
-      </button>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Button
+          onClick={() => navigate('/')}
+          className={styles.backButton}
+        >
+          Back to Home
+        </Button>
+      </motion.div>
     </div>
   );
 }
+
