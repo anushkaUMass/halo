@@ -1,61 +1,45 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import styles from '../styles/EmergencyButton.module.css';
 
-const HOLD_DURATION = 3000; // milliseconds
-
 export default function EmergencyButton() {
-  const [holding, setHolding] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-  const animationRef = useRef<NodeJS.Timeout | null>(null);
-  const startTimeRef = useRef<number>(0);
+  const [isHolding, setIsHolding] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleMouseDown = () => {
-    setHolding(true);
-    startTimeRef.current = Date.now();
+  const handleHoldStart = () => {
+    setIsHolding(true);
 
-    animationRef.current = setInterval(() => {
-      const elapsed = Date.now() - startTimeRef.current;
-      const percent = Math.min((elapsed / HOLD_DURATION) * 100, 100);
-      setProgress(percent);
-
-      if (elapsed >= HOLD_DURATION) {
-        clearInterval(animationRef.current!);
-        clearTimeout(timerRef.current!);
-        triggerEmergency();
-      }
-    }, 20);
-
-    timerRef.current = setTimeout(() => {
-      clearInterval(animationRef.current!);
-    }, HOLD_DURATION);
+    timeoutRef.current = setTimeout(() => {
+      alert('🚨 Emergency triggered!');
+      setIsHolding(false);
+    }, 3000); // must hold 3 seconds
   };
 
-  const handleMouseUp = () => {
-    setHolding(false);
-    setProgress(0);
-    clearTimeout(timerRef.current!);
-    clearInterval(animationRef.current!);
-  };
-
-  const triggerEmergency = () => {
-    alert('🚨 Emergency Triggered!');
+  const handleHoldEnd = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setIsHolding(false);
   };
 
   return (
     <button
       className={styles.emergencyBtn}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-      onTouchStart={handleMouseDown}
-      onTouchEnd={handleMouseUp}
+      onMouseDown={handleHoldStart}
+      onMouseUp={handleHoldEnd}
+      onMouseLeave={handleHoldEnd}
+      onTouchStart={handleHoldStart}
+      onTouchEnd={handleHoldEnd}
     >
       <div
         className={styles.progressOverlay}
-        style={{ width: `${progress}%` }}
+        style={{
+          width: isHolding ? '100%' : '0%',
+          transition: isHolding
+            ? 'width 3s linear'
+            : 'width 0.3s ease-out',
+        }}
       />
-      <span className={styles.label}>Emergency</span>
+      <span className={styles.label}>Hold for SOS</span>
     </button>
   );
 }
