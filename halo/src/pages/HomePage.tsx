@@ -39,6 +39,14 @@ export default function HomePage() {
       >
         Swipe Up
       </Button>
+            {/* Resources Button */}
+      <Button
+        onClick={() => navigate('/resources')}
+        className={styles.buttonPrimary} // 
+      >
+        Resources
+      </Button>
+
     </div>
   );
 }
