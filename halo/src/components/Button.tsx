@@ -1,17 +1,13 @@
 import styles from './Button.module.css';
+import React from 'react';
 
-interface ButtonProps {
-  onClick: () => void;
-  children: React.ReactNode;
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ onClick, children, className }) => {
+const Button: React.FC<ButtonProps> = ({ children, className = '', ...props }) => {
   return (
-    <button
-      onClick={onClick}
-      className={`${styles.button} ${className}`}
-    >
+    <button className={`${styles.button} ${className}`} {...props}>
       {children}
     </button>
   );

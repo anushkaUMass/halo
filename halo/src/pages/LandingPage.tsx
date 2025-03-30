@@ -17,13 +17,13 @@ export default function LandingPage() {
   return (
     <div className={styles.container}>
       {/* Navbar */}
-      <nav className={styles.navbar}>
+      {/* <nav className={styles.navbar}>
         <img src="/elements/halo.svg" alt="Halo Logo" className={styles.logo} />
         <ul className={styles.navLinks}>
           <li onClick={handleGetStarted}>Get Started</li>
           <li onClick={handleContact}>Contact</li>
         </ul>
-      </nav>
+      </nav> */}
 
       <div className={styles.hero}>
         <h1 className={styles.heading}>Welcome to Halo</h1> 
