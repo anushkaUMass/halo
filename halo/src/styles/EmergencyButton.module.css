@@ -1,0 +1,29 @@
+.emergencyBtn {
+    position: relative;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: 600;
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    border-radius: 9999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progressOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(160, 0, 0, 0.3);
+    /* darker red overlay */
+    transition: width 0.1s linear;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.label {
+    position: relative;
+    z-index: 2;
+}
