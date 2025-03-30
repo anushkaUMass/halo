@@ -23,11 +23,6 @@ const Navbar = () => {
       <ul className={`${styles.navLinks} ${isOpen ? styles.show : ''}`}>
         <li onClick={() => navigate('/')}>Home</li>
         <li onClick={() => navigate('/landing')}>Dashboard</li>
-        <li>
-          <Button onClick={() => alert('Emergency triggered!')} className={styles.sosButton}>
-            SOS
-          </Button>
-        </li>
       </ul>
     </nav>
   );

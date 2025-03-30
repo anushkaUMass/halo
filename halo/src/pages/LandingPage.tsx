@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../styles/LandingPage.module.css';
 import Button from '../components/Button';
 import MapView from '../components/MapView';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -16,14 +17,7 @@ export default function LandingPage() {
 
   return (
     <div className={styles.container}>
-      {/* Navbar */}
-      {/* <nav className={styles.navbar}>
-        <img src="/elements/halo.svg" alt="Halo Logo" className={styles.logo} />
-        <ul className={styles.navLinks}>
-          <li onClick={handleGetStarted}>Get Started</li>
-          <li onClick={handleContact}>Contact</li>
-        </ul>
-      </nav> */}
+      {/* Navbar - you can uncomment and use your Navbar component if desired */}
 
       <div className={styles.hero}>
         <h1 className={styles.heading}>Welcome to Halo</h1> 
@@ -49,6 +43,9 @@ export default function LandingPage() {
           </Button>
         </div>
       </div>
+
+      {/* Floating Emergency Button */}
+      <EmergencyButton />
     </div>
   );
 }
