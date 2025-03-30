@@ -16,9 +16,10 @@
     top: 0;
     left: 0;
     height: 100%;
-    background-color: rgba(160, 0, 0, 0.3);
-    /* darker red overlay */
-    transition: width 0.1s linear;
+    background-color: rgba(128, 0, 0, 0.4);
+    /* shadow color */
+    width: 0%;
+    border-radius: 9999px;
     z-index: 1;
     pointer-events: none;
 }
