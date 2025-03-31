@@ -19,26 +19,34 @@ export default function LandingPage() {
 
   return (
     <div className={styles.wrapper}>
+      {/* ======= Mobile Layout ======= */}
       <div className={styles.mobileLayout}>
-        <div className={`${styles.mobileTabContent} ${activeTab === 'home' ? styles.bg : ''}`} style={{ display: activeTab === 'home' ? 'block' : 'none' }}>
+
+        <div
+          className={`${styles.mobileTabContent} ${activeTab === 'home' ? styles.bg : ''}`}
+          style={{ display: activeTab === 'home' ? 'flex' : 'none' }}
+        >
           <h1 className={styles.mobileHeading}>Welcome to Halo</h1>
         </div>
 
-        <div className={`${styles.mobileTabContent} ${activeTab === 'map' ? styles.map : ''}`} style={{ display: activeTab === 'map' ? 'block' : 'none' }}>
-
-    <div className={styles.container}>
-      {/* Navbar - you can uncomment and use your Navbar component if desired */}
-
-      <div className={styles.hero}>
-        <h1 className={styles.heading}>Welcome to Halo</h1> 
-        {/* typewriter font style? would be so cute */}
-
-        <div className="mapContainer">
-
+ 
+        <div
+          className={`${styles.mobileTabContent} ${activeTab === 'map' ? styles.map : ''}`}
+          style={{ display: activeTab === 'map' ? 'block' : 'none' }}
+        >
           <MapView />
         </div>
 
-        <div className={styles.mobileTabContent} style={{ display: activeTab === 'contact' ? 'flex' : 'none', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+
+        <div
+          className={styles.mobileTabContent}
+          style={{
+            display: activeTab === 'contact' ? 'flex' : 'none',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >
           <h1 className={styles.mobileHeading}>Let's Get In Touch!</h1>
           <Button onClick={handleGetStarted} className={styles.primaryButton}>Get Started</Button>
           <Button onClick={handleContact} className={styles.secondaryButton}>Contact Us</Button>
@@ -66,7 +74,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* desktop  */}
+      {/* ======= desktop ======= */}
       <div className={styles.desktopLayout}>
         <div className={styles.desktopContentSection}>
           <nav className={styles.desktopNavbar}>
@@ -95,7 +103,6 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* Floating Emergency Button */}
       <EmergencyButton />
     </div>
   );
