@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-color: #ffb7ce;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .profileForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 12px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ff4d4d;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .inputField:focus {
+    border-color: #1e90ff;
+    outline: none;
+  }
+  
+  .saveButton {
+    background-color: #1e90ff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .saveButton:hover {
+    background-color: #1c86ee;
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 28px;
+    }
+  
+    .profileForm {
+      width: 90%;
+    }
+  }
+  
