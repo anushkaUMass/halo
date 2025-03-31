@@ -23,6 +23,7 @@ const Navbar = () => {
       <ul className={`${styles.navLinks} ${isOpen ? styles.show : ''}`}>
         <li onClick={() => navigate('/')}>Home</li>
         <li onClick={() => navigate('/landing')}>Dashboard</li>
+        <li onClick={() => navigate('/profile')}>Profile</li>
       </ul>
     </nav>
   );
