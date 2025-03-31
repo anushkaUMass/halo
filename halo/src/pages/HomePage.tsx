@@ -15,12 +15,14 @@ export default function HomePage() {
 
   return (
     <div className={styles.container}>
+
       {/* Centered Emergency Button above the logo */}
       <div className={styles.emergencyTop}>
         <EmergencyButton />
       </div>
 
       {/* Logo */}
+
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
@@ -30,12 +32,22 @@ export default function HomePage() {
         <img src="/elements/halo.svg" alt="Halo Logo" className={styles.logo} />
       </motion.div>
 
+
+      <Button
+        onClick={() => alert('Emergency triggered!')}
+        className={styles.buttonDanger}
+      >
+        Emergency
+      </Button>
+
+
       {/* Swipe Up Button */}
+
       <Button
         onClick={handleTransition}
         className={styles.buttonPrimary}
       >
-        Swipe Up
+        Let's go
       </Button>
             {/* Resources Button */}
       <Button

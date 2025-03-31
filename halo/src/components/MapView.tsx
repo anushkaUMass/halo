@@ -1,8 +1,8 @@
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '60vw',
-  height: '60vh',
+  width: '100vw',
+  height: '100vh',
   borderRadius: '16px',
 };
 
@@ -26,7 +26,6 @@ const cuteMapStyle: google.maps.MapTypeStyle[] = [
       { saturation: -78 },
       { hue: "#6600ff" },
       { lightness: -47 },
-      { visibility: "off" }
     ]
   },
   {
