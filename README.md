@@ -41,6 +41,7 @@ Women’s safety is a **major concern in today’s society**. Despite advancemen
 
 ## UI & Wireframes  
 🔗 **View UI Diagrams**: [Halo UI Mockups](https://indofusion101.my.canva.site/aura)  
+🔗 [**UI/UX Design and Style Guidelines Document**](https://docs.google.com/document/d/1aApLlsQjtBCyK8PMQE2-VZDDxHQtR2RwW9_5cpFHGRI/edit?usp=sharing)
 
 ## Setup Instructions *(To be expanded in future sprints)*  
 -TBD
