@@ -43,5 +43,16 @@ Women’s safety is a **major concern in today’s society**. Despite advancemen
 🔗 **View UI Diagrams**: [Halo UI Mockups](https://indofusion101.my.canva.site/aura)  
 🔗 [**UI/UX Design and Style Guidelines Document**](https://docs.google.com/document/d/1aApLlsQjtBCyK8PMQE2-VZDDxHQtR2RwW9_5cpFHGRI/edit?usp=sharing)
 
+## Performance Checklist  
+✅ Efficient event handling, seen throughout entire repo thus far
+
+✅ Efficient and concise state usage (example: ```HomePage.tsx```)
+
+✅ Lazy-loading state and components (example: ```ProfilePage.tsx```, with ```useState``` specifically)
+
+✅ Minimizes unnecessary re-renders (example: ```ResourcesPage.tsx```)
+
+✅ Maintains component re-usage (example: ```LandingPage.tsx```)
+
 ## Setup Instructions *(To be expanded in future sprints)*  
 -TBD
