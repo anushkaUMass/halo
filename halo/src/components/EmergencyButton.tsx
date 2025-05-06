@@ -9,9 +9,9 @@ export default function EmergencyButton() {
     setIsHolding(true);
 
     timeoutRef.current = setTimeout(() => {
-      alert('🚨 Emergency triggered!');
+      sendSOS();
       setIsHolding(false);
-    }, 3000); // must hold 3 seconds
+    }, 3000);
   };
 
   const handleHoldEnd = () => {
@@ -21,6 +21,26 @@ export default function EmergencyButton() {
     setIsHolding(false);
   };
 
+  const sendSOS = async () => {
+    const payload = {
+      userId: 'anushka01',
+      location: '42.391, -72.523',
+      timestamp: new Date().toISOString(),
+    };
+
+    try {
+      const res = await fetch('http://localhost:4000/sos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      alert(data.message); // response from backend
+    } catch (err) {
+      console.error('SOS failed:', err);
+    }
+  };
   return (
     <button
       className={styles.emergencyBtn}
