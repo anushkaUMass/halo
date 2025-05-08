@@ -8,3 +8,12 @@ services:
     volumes:
       - ./backend:/app
     command: npm run dev
+  incidentReport:
+    build:
+      context: ./incidentReport
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./incidentReport:/app
+    command: npm run start
